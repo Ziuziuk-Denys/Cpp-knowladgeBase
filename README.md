@@ -69,3 +69,35 @@ In this main **README.md**, I consolidate my core findings. Think of this as a *
   <b>Developed with precision by Denys</b><br>
   Copyright © 2026
 </p>
+
+---
+
+<h1 align="center">Variable Types & Memory</h1>
+
+In C++, variables are not just containers; they are tools for optimization. Choosing the right type can significantly **speed up your program** and **reduce memory consumption**.
+
+---
+
+<h1 align="center">Core Data Types</h1>
+
+| Type | What it stores | Real-world Use Case |
+| :--- | :--- | :--- |
+| <img src="https://img.shields.io/badge/-int-00599C?style=flat-square" /> | **Integers** (whole numbers) | Request counters, User IDs, loop counts. |
+| <img src="https://img.shields.io/badge/-double-44CC11?style=flat-square" /> | **Fractions** (floating point) | Prices, audio amplitudes, neural network weights. |
+| <img src="https://img.shields.io/badge/-string-orange?style=flat-square" /> | **Text** | Client names, API keys, JSON payloads. |
+| <img src="https://img.shields.io/badge/-bool-red?style=flat-square" /> | **Logic** (True/False) | `isMicActive`, `isServerConnected`, `hasPaid`. |
+| <img src="https://img.shields.io/badge/-size__t-9cf?style=flat-square" /> | **Positive Integers** | Safe indexing in loops, vector sizes (`.size()`). |
+
+---
+
+## 🔬 Advanced Optimization Tips
+
+### ⚡ The `short` type
+Contrary to popular belief, `short` is a **16-bit integer**. 
+* **Use case:** When you need to store millions of small numbers (like raw 16-bit audio samples) and want to save 50% of memory compared to a standard `int`.
+* **Range:** -32,768 to 32,767.
+
+### 🛡️ The `const` Modifier
+If a value is not going to change (like a fixed API endpoint or a math constant), always mark it as `const`. 
+```cpp
+const double HOURLY_RATE = 15.0; // Locked value
