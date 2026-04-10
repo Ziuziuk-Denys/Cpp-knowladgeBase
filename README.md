@@ -33,18 +33,6 @@ In this main **README.md**, I will write all my knowledge, but with less detail 
 
 ---
 
-## 🧠 Core Knowledge Overview
-
-<p align="right">
-  <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/raw/main/Assets/code_preview.gif" width="300" />
-</p>
-
-* **Memory:** Working with Pointers `*` and References `&`.
-* **OOP:** Building robust systems with Classes and Structs.
-* **AI:** Integrating ElevenLabs and Deepgram APIs.
-
----
-
 ## 🛠️ Development Environment
 
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
