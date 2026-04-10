@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" width="40" height="40" /> C++ Knowledge Base & Journey
+# <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.sv](https://i.gifer.com/2r6D.gif)g" width="40" height="40" /> C++ Knowledge Base & Journey
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/render?type=waving&color=00599C&height=120&section=header&text=Learning%20C++%20&%20AI&fontSize=50" />
