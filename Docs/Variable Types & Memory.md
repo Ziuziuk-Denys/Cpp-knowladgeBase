@@ -12,7 +12,7 @@
 
 A variable is basically a **named box in memory** that holds some value while your program runs. The *type* of that box tells C++ how much memory to allocate and how to interpret the bits stored inside.
 
-Picking the wrong type won't always crash your program — but it *will* waste memory, slow things down, or cause weird bugs you won't see coming. So this stuff actually matters.
+Picking the wrong type won't always crash your program - but it *will* waste memory, slow things down, or cause weird bugs you won't see coming. So this stuff actually matters.
 
 > [!TIP]
 > **My personal rule:** Think about what kind of data you're storing *before* you write the variable. It saves you refactoring pain later.
@@ -31,7 +31,7 @@ Picking the wrong type won't always crash your program — but it *will* waste m
 
 ---
 
-<h1 align="center">🔢 `int` — Whole Numbers</h1>
+<h1 align="center">🔢 `int` - Whole Numbers</h1>
 
 The most basic type. Perfect for counting things, loop variables, and any value that will never be a fraction.
 
@@ -56,9 +56,9 @@ int main() {
 
 ---
 
-<h1 align="center">💰 `double` — Decimal Numbers</h1>
+<h1 align="center">💰 `double` - Decimal Numbers</h1>
 
-Use `double` whenever you need precision — prices, scientific calculations, audio signal amplitudes, anything with a decimal point.
+Use `double` whenever you need precision - prices, scientific calculations, audio signal amplitudes, anything with a decimal point.
 
 <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/double.png?raw=true" height="400"/>
 
@@ -76,7 +76,7 @@ int main() {
 
 > **Output:** `Price with sale will be: 94.9905`
 
-**Memory:** 8 bytes. Way more precise than `float` — I always default to `double` unless memory is a serious concern.
+**Memory:** 8 bytes. Way more precise than `float` - I always default to `double` unless memory is a serious concern.
 
 ### Real use-case with `double` in audio:
 
@@ -97,13 +97,15 @@ int main() {
 
 > **Output:** `Silence detected at index: 1` and `Silence detected at index: 3`
 
-Notice I used `size_t` for the loop index — that's intentional (see below).
+Notice I used `size_t` for the loop index - that's intentional (see below).
 
 ---
 
-<h1 align="center">📝 `string` — Text</h1>
+<h1 align="center">📝 `string` - Text</h1>
 
 For anything text-based. `string` in C++ is part of the standard library, so you get a ton of built-in methods for free.
+
+<img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/string.png?raw=true" height="400"/>
 
 ```cpp
 #include <iostream>
@@ -119,13 +121,15 @@ int main() {
 
 > **Output (example):** `your name is: Denys`
 
-**Important:** `string` is not a primitive type — it's an object, which means it manages its own memory dynamically. Don't stress about that for now, just know it's safe to use.
+**Important:** `string` is not a primitive type - it's an object, which means it manages its own memory dynamically. Don't stress about that for now, just know it's safe to use.
 
 ---
 
-<h1 align="center">✅ `bool` — True or False</h1>
+<h1 align="center">✅ `bool` - True or False</h1>
 
-`bool` only holds two values: `true` or `false`. It's 1 byte in memory even though it only *needs* 1 bit — that's just how C++ handles alignment.
+`bool` only holds two values: `true` or `false`. It's 1 byte in memory even though it only *needs* 1 bit - that's just how C++ handles alignment.
+
+<img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/bool.png?raw=true" height="400"/>
 
 ```cpp
 #include <iostream>
@@ -143,13 +147,15 @@ int main() {
 
 > **Output:** `It's raining outside. Don't forget to take an umbrella!`
 
-I use `bool` constantly for state flags — things like `isMicActive`, `isServerConnected`, or `hasPaid`. It makes your `if` conditions way more readable than comparing integers.
+I use `bool` constantly for state flags - things like `isMicActive`, `isServerConnected`, or `hasPaid`. It makes your `if` conditions way more readable than comparing integers.
 
 ---
 
-<h1 align="center">📏 `size_t` — Safe Indexing</h1>
+<h1 align="center">📏 `size_t` - Safe Indexing</h1>
 
 `size_t` is an **unsigned integer** type, specifically designed for sizes and indices. You get it automatically when you use `.size()` on a container, and it's the "correct" type to use in loops over vectors or arrays.
+
+<img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/size_t.png?raw=true" height="400"/>
 
 ```cpp
 #include <iostream>
@@ -170,9 +176,9 @@ int main() {
 
 ---
 
-<h1 align="center">⚡ Advanced: `short` — Memory Saver</h1>
+<h1 align="center">⚡ Advanced: `short` - Memory Saver</h1>
 
-`short` is a 16-bit integer. That's half the size of `int`. When you're dealing with **millions** of small values — like raw audio samples in a buffer — this actually matters.
+`short` is a 16-bit integer. That's half the size of `int`. When you're dealing with **millions** of small values - like raw audio samples in a buffer - this actually matters.
 
 **Range:** −32,768 to 32,767
 **Memory:** 2 bytes (vs 4 bytes for `int`)
@@ -192,7 +198,7 @@ const double HOURLY_RATE = 15.0;
 const double PI = 3.14159265358979;
 ```
 
-I use `const` for anything that's a fixed config value — API endpoints, math constants, thresholds. It's a tiny thing that makes your code much more intentional.
+I use `const` for anything that's a fixed config value - API endpoints, math constants, thresholds. It's a tiny thing that makes your code much more intentional.
 
 ---
 
