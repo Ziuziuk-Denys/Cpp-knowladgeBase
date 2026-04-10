@@ -26,7 +26,7 @@ Hello everyone! This repository is a curated space created to **store my C++ kno
 
 | Section | Description | Quick Link |
 | :--- | :--- | :--- |
-| 🚀 **Projects** | Practical implementations and AI experiments. | [**Browse Code**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Projects) |
+| 🚀 **Projects** | Practical implementations and experiments. | [**Browse Code**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Projects) |
 | 📖 **Docs** | Deep dives into sub-topics and theory. | [**Study Notes**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) |
 | 📂 **Assets** | Media, diagrams, and visual references. | [**Media Gallery**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Assets) |
 
