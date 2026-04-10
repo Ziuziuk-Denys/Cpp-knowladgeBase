@@ -16,7 +16,7 @@ Hello everyone! This repository is a curated space created to **store my C++ kno
 
 ---
 
-## 🗺️ Navigation Hub
+<h1 align="center">🗺️ Navigation Hub</h1>
 
 <div align="center">
 
