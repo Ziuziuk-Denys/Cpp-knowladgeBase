@@ -1,0 +1,24 @@
+#~~Visual Studio~~
+.vs/
+out/
+build/
+bin/
+obj/
+*.exe
+*.pdb
+*.user
+*.suo
+*.sln.doccache
+
+# CLion
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+*.tmp
