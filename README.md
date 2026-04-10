@@ -41,7 +41,7 @@ In this main **README.md**, I consolidate my core findings. Think of this as a *
 
 ## 🛠️ Tech Stack & Tools
 
-<p align="left">
+<p align="left center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=cpp,visualstudio,clion,github,git,windows,cmake" />
   </a>
