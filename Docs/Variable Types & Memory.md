@@ -60,6 +60,8 @@ int main() {
 
 Use `double` whenever you need precision — prices, scientific calculations, audio signal amplitudes, anything with a decimal point.
 
+<img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/double.png?raw=true" height="400"/>
+
 ```cpp
 #include <iostream>
 using namespace std;
