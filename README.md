@@ -10,7 +10,7 @@
 
 ---
 
-## 💫 Introduction
+<h1 align="center">💫 Introduction</h1>
 
 Hello everyone! This repository is a curated space created to **store my C++ knowledge**, document my projects, and organize technical insights. I'm building this as a personal wiki and a showcase of my journey into high-performance computing and AI.
 
@@ -30,7 +30,7 @@ Hello everyone! This repository is a curated space created to **store my C++ kno
 
 ---
 
-## 📝 Learning Log & Quick Access
+<h1 align="center">📝 Learning Log & Quick Access</h1>
 
 In this main **README.md**, I consolidate my core findings. Think of this as a **fast-access tool** for me and my visitors. For more accurate, detailed knowledge, head over to the [Docs](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) section.
 
@@ -49,7 +49,7 @@ In this main **README.md**, I consolidate my core findings. Think of this as a *
 
 ---
 
-## 🎨 Visual Assets Showcase
+<h1 align="center">Visual Assets Showcase</h1>
 
 <p align="center">
   <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/code_preview.gif?raw=true" width="600" alt="Code Preview" />
