@@ -1,51 +1,76 @@
-# <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" width="40" height="40" /> C++ Knowledge Base & Journey
-
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=00599C&height=120&section=header&text=Learning%20C++%20&%20AI&fontSize=50" />
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=00599C&height=150&section=header&text=C++%20Knowledge%20Base&fontSize=60&animation=fadeIn" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/raw/main/Assets/welcome_banner.gif" width="600" alt="Main Animation Space" />
+  <img src="https://img.shields.io/badge/C++-Learning_Path-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Internship-Summer_2026-blueviolet?style=for-the-badge" />
 </p>
 
 ---
 
-## 👋 Hello everyone!
+## 💫 Introduction
 
-This GitHub repository was created to **store my C++ knowledge**, my projects, and other information. I am documenting my path from basics to advanced AI integrations.
+Hello everyone! This repository is a curated space created to **store my C++ knowledge**, document my projects, and organize technical insights. I'm building this as a personal wiki and a showcase of my journey into high-performance computing and AI.
 
-### 🗺️ Navigation Hub
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Ziuziuk-Denys&repo=Cpp-knowladgeBase&theme=tokyonight" />
+</p>
 
-| Category | Fast Access Link | Tech Stack |
+---
+
+## 🗺️ Navigation Hub
+
+<div align="center">
+
+| Section | Description | Quick Link |
 | :--- | :--- | :--- |
-| **🚀 Projects** | [./Projects](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Projects) | ![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=flat-square&logo=c%2B%2B&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-%23064F8C.svg?style=flat-square&logo=cmake&logoColor=white) |
-| **📖 Docs** | [./Docs](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Docs) | ![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?style=flat-square&logo=markdown&logoColor=white) |
-| **📂 Assets** | [./Assets](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Assets) | ![Assets](https://img.shields.io/badge/Media-Storage-orange?style=flat-square) |
+| 🚀 **Projects** | Practical implementations and AI experiments. | [**Browse Code**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Projects) |
+| 📖 **Docs** | Deep dives into sub-topics and theory. | [**Study Notes**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) |
+| 📂 **Assets** | Media, diagrams, and visual references. | [**Media Gallery**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Assets) |
+
+</div>
 
 ---
 
-## 📝 About this README
+## 📝 Learning Log & Quick Access
 
-In this main **README.md**, I will write all my knowledge, but with less detail than in the **Docs** folder. 
+In the main **README.md**, I consolidate my core findings. Think of this as a **fast-access tool** for me and my visitors. For more accurate, detailed knowledge, head over to the [Docs](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) section.
 
-> [!IMPORTANT]
-> This README is designed as a **fast access tool** for me and my visitors. For deep dives into code logic and memory management, please refer to the specific files in the Docs section.
+> [!TIP]
+> **Current Focus:** Mastering memory management (Pointers & References) to optimize real-time audio processing for ElevenLabs.
 
 ---
 
-## 🛠️ Development Environment
+## 🛠️ Tech Stack & Tools
 
-![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
-![CLion](https://img.shields.io/badge/CLion-000000.svg?style=for-the-badge&logo=clion&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=cpp,visualstudio,clion,github,git,windows,cmake" />
+  </a>
+</p>
+
+---
+
+## 🎨 Visual Assets Showcase
+*Here you will find screenshots and demos of my work.*
+
+<p align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJpbmZqam9scXp3bmZ3bmZ3bmZ3bmZ3bmZ3bmZ3JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZ力を/3o7TKVUn7iM8FMEU24/giphy.gif" width="600" />
+</p>
 
 ---
 
 <p align="center">
-  <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/raw/main/Assets/footer_divider.gif" width="100%" />
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
 </p>
 
 <p align="center">
-  <b>Built by Denys</b> • 2026
+  <img src="https://komarev.com/ghpvc/?username=Ziuziuk-Denys&color=00599C&style=flat-square&label=PROFILE+VIEWS" />
+</p>
+
+<p align="center">
+  <b>Developed with precision by Denys</b><br>
+  Copyright © 2026
 </p>
