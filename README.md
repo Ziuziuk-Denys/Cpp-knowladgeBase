@@ -90,7 +90,7 @@ In C++, variables are not just containers; they are tools for optimization. Choo
 
 ---
 
-## 🔬 Advanced Optimization Tips
+<h1 align="center">Advanced Optimization Tips</h1>
 
 ### ⚡ The `short` type
 Contrary to popular belief, `short` is a **16-bit integer**. 
