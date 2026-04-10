@@ -23,11 +23,11 @@ Picking the wrong type won't always crash your program — but it *will* waste m
 
 | Type | What it stores | Real-world Use Case |
 | :--- | :--- | :--- |
-| <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/int.png?raw=true" height="22"/> | **Integers** (whole numbers) | Loop counters, User IDs, request counts |
-| <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/double.png?raw=true" height="22"/> | **Fractions** (floating-point) | Prices, audio amplitudes, neural net weights |
-| <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/string.png?raw=true" height="22"/> | **Text** | Names, API keys, JSON payloads |
-| <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/bool.png?raw=true" height="22"/> | **Logic** (true / false) | `isMicActive`, `isConnected`, `hasPaid` |
-| <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/size_t.png?raw=true" height="22"/> | **Positive integers** | Safe loop indexing, `.size()` on vectors |
+| <img src="https://img.shields.io/badge/-int-00599C?style=flat-square" height="22"/> | **Integers** (whole numbers) | Loop counters, User IDs, request counts |
+| <img src="https://img.shields.io/badge/-double-44CC11?style=flat-square" height="22"/> | **Fractions** (floating-point) | Prices, audio amplitudes, neural net weights |
+| <img src="https://img.shields.io/badge/-string-orange?style=flat-square" height="22"/> | **Text** | Names, API keys, JSON payloads |
+| <img src="https://img.shields.io/badge/-bool-red?style=flat-square" height="22"/> | **Logic** (true / false) | `isMicActive`, `isConnected`, `hasPaid` |
+| <img src="https://img.shields.io/badge/-size__t-9cf?style=flat-square" height="22"/> | **Positive integers** | Safe loop indexing, `.size()` on vectors |
 
 ---
 
