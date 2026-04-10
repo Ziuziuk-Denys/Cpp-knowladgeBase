@@ -35,7 +35,7 @@ Hello everyone! This repository is a curated space created to **store my C++ kno
 In this main **README.md**, I consolidate my core findings. Think of this as a **fast-access tool** for me and my visitors. For more accurate, detailed knowledge, head over to the [Docs](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) section.
 
 > [!TIP]
-> **Current Focus:** Mastering memory management (Pointers & References) to optimize real-time audio processing for ElevenLabs and Deepgram.
+> **Current Focus:** Mastering memory management (Pointers & References) to optimize real-time audio processing.
 
 ---
 
