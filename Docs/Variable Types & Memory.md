@@ -35,7 +35,7 @@ Picking the wrong type won't always crash your program — but it *will* waste m
 
 The most basic type. Perfect for counting things, loop variables, and any value that will never be a fraction.
 
-<img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/int.png?raw=true" height="200"/>
+<img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/int.png?raw=true" height="400"/>
 
 ```cpp
 #include <iostream>
