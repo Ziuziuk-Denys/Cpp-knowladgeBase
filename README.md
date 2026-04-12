@@ -10,27 +10,27 @@
 
 ---
 
-<h1 align="center">💫 Introduction</h1>
+<h1 align="center">Introduction</h1>
 
 Hello everyone! This repository is a curated space created to **store my C++ knowledge**, document my projects, and organize technical insights. I'm building this as a personal wiki and a showcase of my journey into high-performance computing and AI.
 
 ---
 
-<h1 align="center">🗺️ Navigation Hub</h1>
+<h1 align="center">Navigation Hub</h1>
 
 <div align="center">
 
 | Section | Description | Quick Link |
 | :--- | :--- | :--- |
-| 🚀 **Projects** | Practical implementations and experiments. | [**Browse Code**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Projects) |
-| 📖 **Docs** | Deep dives into sub-topics and theory. | [**Study Notes**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) |
-| 📂 **Assets** | Media, diagrams, and visual references. | [**Media Gallery**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Assets) |
+| **Projects** | Practical implementations and experiments. | [**Browse Code**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Projects) |
+| **Docs** | Deep dives into sub-topics and theory. | [**Study Notes**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) |
+| **Assets** | Media, diagrams, and visual references. | [**Media Gallery**](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/tree/main/Assets) |
 
 </div>
 
 ---
 
-<h1 align="center">📝 Learning Log & Quick Access</h1>
+<h1 align="center">Learning Log & Quick Access</h1>
 
 In this main **README.md**, I consolidate my core findings. Think of this as a **fast-access tool** for me and my visitors. For more accurate, detailed knowledge, head over to the [Docs](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) section.
 
@@ -92,12 +92,12 @@ In C++, variables are not just containers; they are tools for optimization. Choo
 
 <h1 align="center">Advanced Optimization Tips</h1>
 
-### ⚡ The `short` type
+### The `short` type
 Contrary to popular belief, `short` is a **16-bit integer**. 
 * **Use case:** When you need to store millions of small numbers (like raw 16-bit audio samples) and want to save 50% of memory compared to a standard `int`.
 * **Range:** -32,768 to 32,767.
 
-### 🛡️ The `const` Modifier
+### The `const` Modifier
 If a value is not going to change (like a fixed API endpoint or a math constant), always mark it as `const`. 
 ```cpp
 const double HOURLY_RATE = 15.0; // Locked value
