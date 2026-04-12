@@ -1,4 +1,4 @@
-<h1 align="center">🧠 Variable Types & Memory</h1>
+<h1 align="center">Variable Types & Memory</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-Variables_&_Types-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
@@ -8,7 +8,7 @@
 
 ---
 
-<h1 align="center">💡 What Are Variables?</h1>
+<h1 align="center">What Are Variables?</h1>
 
 A variable is basically a **named box in memory** that holds some value while your program runs. The *type* of that box tells C++ how much memory to allocate and how to interpret the bits stored inside.
 
@@ -19,7 +19,7 @@ Picking the wrong type won't always crash your program - but it *will* waste mem
 
 ---
 
-<h1 align="center">🗂️ Core Types at a Glance</h1>
+<h1 align="center">Core Types at a Glance</h1>
 
 | Type | What it stores | Real-world Use Case |
 | :--- | :--- | :--- |
@@ -31,7 +31,7 @@ Picking the wrong type won't always crash your program - but it *will* waste mem
 
 ---
 
-<h1 align="center">🔢 int - Whole Numbers</h1>
+<h1 align="center">int - Whole Numbers</h1>
 
 The most basic type. Perfect for counting things, loop variables, and any value that will never be a fraction.
 
@@ -56,7 +56,7 @@ int main() {
 
 ---
 
-<h1 align="center">💰 double - Decimal Numbers</h1>
+<h1 align="center">double - Decimal Numbers</h1>
 
 Use `double` whenever you need precision - prices, scientific calculations, audio signal amplitudes, anything with a decimal point.
 
@@ -101,7 +101,7 @@ Notice I used `size_t` for the loop index - that's intentional (see below).
 
 ---
 
-<h1 align="center">📝 string - Text</h1>
+<h1 align="center">string - Text</h1>
 
 For anything text-based. `string` in C++ is part of the standard library, so you get a ton of built-in methods for free.
 
@@ -125,7 +125,7 @@ int main() {
 
 ---
 
-<h1 align="center">✅ bool - True or False</h1>
+<h1 align="center">bool - True or False</h1>
 
 `bool` only holds two values: `true` or `false`. It's 1 byte in memory even though it only *needs* 1 bit - that's just how C++ handles alignment.
 
@@ -151,7 +151,7 @@ I use `bool` constantly for state flags - things like `isMicActive`, `isServerCo
 
 ---
 
-<h1 align="center">📏 size_t - Safe Indexing</h1>
+<h1 align="center">size_t - Safe Indexing</h1>
 
 `size_t` is an **unsigned integer** type, specifically designed for sizes and indices. You get it automatically when you use `.size()` on a container, and it's the "correct" type to use in loops over vectors or arrays.
 
@@ -176,7 +176,7 @@ int main() {
 
 ---
 
-<h1 align="center">⚡ Advanced: short - Memory Saver</h1>
+<h1 align="center">Advanced: short - Memory Saver</h1>
 
 `short` is a 16-bit integer. That's half the size of `int`. When you're dealing with **millions** of small values - like raw audio samples in a buffer - this actually matters.
 
@@ -189,7 +189,7 @@ short rawSample = 24000; // a valid 16-bit audio sample value
 
 ---
 
-<h1 align="center">🔒 The const Modifier</h1>
+<h1 align="center">The const Modifier</h1>
 
 If a value is never going to change, mark it as `const`. The compiler will stop you from accidentally overwriting it, and it's a clear signal to anyone reading your code.
 
@@ -202,7 +202,7 @@ I use `const` for anything that's a fixed config value - API endpoints, math con
 
 ---
 
-<h1 align="center">🧮 Memory Size Cheat Sheet</h1>
+<h1 align="center">Memory Size Cheat Sheet</h1>
 
 | Type | Size | Range (approximate) |
 | :--- | :--- | :--- |
