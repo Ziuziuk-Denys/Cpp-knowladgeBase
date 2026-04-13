@@ -99,8 +99,6 @@ Contrary to popular belief, `short` is a **16-bit integer**.
 
 ### The `const` Modifier
 If a value is not going to change (like a fixed API endpoint or a math constant), always mark it as `const`. 
-```cpp
-const double HOURLY_RATE = 15.0; // Locked value
 
 ---
 
