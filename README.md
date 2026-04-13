@@ -101,3 +101,78 @@ Contrary to popular belief, `short` is a **16-bit integer**.
 If a value is not going to change (like a fixed API endpoint or a math constant), always mark it as `const`. 
 ```cpp
 const double HOURLY_RATE = 15.0; // Locked value
+
+---
+
+<h1 align="center">Operators & Expressions</h1>
+
+In C++, operators are not just the basic `+, -, *, /, %` like you'd see in Python or other languages. They go way deeper — from comparing values to controlling logic flow. This is a **fast-access overview**. For full breakdowns with examples, head to the [Docs](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/).
+
+---
+
+<h1 align="center">Arithmetic Operators</h1>
+
+| Operator | What it does | Quick Example |
+| :--- | :--- | :--- |
+| <img src="https://img.shields.io/badge/-%2B-00599C?style=flat-square" /> | **Addition** — adds two values together, works on numbers and strings | `5 + 3 = 8` |
+| <img src="https://img.shields.io/badge/--minus--44CC11?style=flat-square" /> | **Subtraction** — subtracts one value from another | `10 - 4 = 6` |
+| <img src="https://img.shields.io/badge/-%2A-orange?style=flat-square" /> | **Multiplication** — multiplies two numbers | `4 * 3 = 12` |
+| <img src="https://img.shields.io/badge/-%2F-red?style=flat-square" /> | **Division** — divides one number by another (watch out for int division!) | `10 / 2 = 5` |
+| <img src="https://img.shields.io/badge/-%25-9cf?style=flat-square" /> | **Modulo** — gives you the **remainder** after division, not a percentage | `10 % 3 = 1` |
+
+> [!WARNING]
+> `%` is **NOT** for percentage. `10 % 3` gives `1` (the leftover after dividing 10 by 3). Easy to mix up at first.
+
+> [!TIP]
+> Integer division in C++ drops the decimal: `7 / 2 = 3`, not `3.5`. Use `double` if you need the full result.
+
+---
+
+<h1 align="center">Comparison Operators</h1>
+
+These always return a `bool` — either `true` or `false`. Used a lot inside `if` statements and loops.
+
+| Operator | Meaning | Example |
+| :--- | :--- | :--- |
+| <img src="https://img.shields.io/badge/-==-00599C?style=flat-square" /> | **Equal to** — checks if two values are the same | `5 == 5` → `true` |
+| <img src="https://img.shields.io/badge/-!=-red?style=flat-square" /> | **Not equal to** — true if values are different | `5 != 3` → `true` |
+| <img src="https://img.shields.io/badge/-%3C-orange?style=flat-square" /> | **Less than** | `3 < 7` → `true` |
+| <img src="https://img.shields.io/badge/-%3E-44CC11?style=flat-square" /> | **Greater than** | `9 > 4` → `true` |
+| <img src="https://img.shields.io/badge/-%3C=-9cf?style=flat-square" /> | **Less than or equal to** | `5 <= 5` → `true` |
+| <img src="https://img.shields.io/badge/-%3E=-blueviolet?style=flat-square" /> | **Greater than or equal to** | `6 >= 3` → `true` |
+
+> [!NOTE]
+> `==` compares values. `=` assigns a value. Classic mistake — `if (x = 5)` sets x to 5 instead of checking it.
+
+---
+
+<h1 align="center">Logical Operators</h1>
+
+Used to combine or flip boolean conditions. Super useful for building more complex `if` checks.
+
+| Operator | Meaning | Example |
+| :--- | :--- | :--- |
+| <img src="https://img.shields.io/badge/-&&-00599C?style=flat-square" /> | **AND** — both conditions must be true | `isConnected && hasApiKey` |
+| <img src="https://img.shields.io/badge/-%7C%7C-orange?style=flat-square" /> | **OR** — at least one condition must be true | `isAdmin \|\| isOwner` |
+| <img src="https://img.shields.io/badge/-!-red?style=flat-square" /> | **NOT** — flips `true` to `false` and the other way around | `!isMuted` |
+
+---
+
+<h1 align="center">Operator Precedence</h1>
+
+C++ evaluates operators in a specific order — like math rules (multiplication before addition). Here's the rough priority from **highest to lowest**:
+
+```
+!  (NOT)            ← evaluated first
+*  /  %             ← then multiplication/division/modulo
++  -                ← then addition/subtraction
+<  >  <=  >=        ← then comparisons
+== !=               ← then equality checks
+&&                  ← then AND
+||                  ← then OR
+```
+
+> [!TIP]
+> When in doubt, just use parentheses `()` — they always override the default order and make your code easier to read anyway.
+
+---
