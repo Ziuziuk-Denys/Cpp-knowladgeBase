@@ -17,7 +17,7 @@ This is my first real API project in C++ and I'm pretty happy with it.
 
 <h1 align="center">What it does</h1>
 
-- Takes a text ("Hello this is white cat, I'm gay")
+- Takes a text ("Hello! This is a test")
 - Sends it to ElevenLabs TTS API
 - Uses a specific voice (EXAVITQu4vr4xnSDxMaL)
 - Gets the audio back as MP3
@@ -37,15 +37,15 @@ cmake ..
 cmake --build .
 ```
 
-4. Run the executable — it will create `output.mp3`
+4. Run the executable - it will create `output.mp3`
 
 ---
 
 <h1 align="center">Project Files</h1>
 
-- `main.cpp` — the main code (with tons of comments)
-- `config.h` — where I store my secret API key
-- `CMakeLists.txt` — build instructions
+- `main.cpp` - the main code (with tons of comments)
+- `config.h` - where I store my secret API key
+- `CMakeLists.txt` - build instructions
 
 ---
 
@@ -99,7 +99,7 @@ int main() {
         
         // Create the JSON payload that we send to the API
         json payload = {
-            {"text", "Hello this is white cat, I'm gay"},   // The text we want to speak
+            {"text", "Hello! This is a test"},   // The text we want to speak
             {"model_id", "eleven_multilingual_v2"},         // Which AI model to use (good for many languages)
             {"voice_settings", {                            // Settings that control how the voice sounds
                 {"stability", 0.75},                        // How stable/emotional the voice is
