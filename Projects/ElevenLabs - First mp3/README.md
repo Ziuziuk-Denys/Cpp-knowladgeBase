@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/welcome_banner.gif?raw=true" width="100%" alt="Welcome Banner" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/C++-ElevenLabs%20TTS-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
   <img src="https://img.shields.io/badge/Status-Working-success?style=for-the-badge" />
 </p>
@@ -7,149 +11,165 @@
 
 <h1 align="center">ElevenLabs First MP3</h1>
 
-Yo guys! This is my first try to make text-to-speech with **ElevenLabs** API using C++.  
-It sends text to ElevenLabs, gets back an MP3 file with a cool voice and saves it as `output.mp3`.
+Yo guys! This is my first project where I make the computer speak using **ElevenLabs** API in C++.  
+I send some text, and it gives me back an MP3 file with a cool voice.
 
-Super simple but already works! I used curl for HTTP requests and nlohmann/json for making the payload.  
-This is my first real API project in C++ and I'm pretty happy with it.
-
----
-
-<h1 align="center">What it does</h1>
-
-- Takes a text ("Hello! This is a test")
-- Sends it to ElevenLabs TTS API
-- Uses a specific voice (EXAVITQu4vr4xnSDxMaL)
-- Gets the audio back as MP3
-- Saves it to `output.mp3` in the same folder
-
----
-
-<h1 align="center">How to build and run</h1>
-
-1. Put your ElevenLabs API key in `config.h`
-2. Make sure you have **libcurl** and **nlohmann_json** installed
-3. Build with CMake:
-
-```bash
-mkdir build && cd build
-cmake ..
-cmake --build .
-```
-
-4. Run the executable - it will create `output.mp3`
-
----
-
-<h1 align="center">Project Files</h1>
-
-- `main.cpp` - the main code (with tons of comments)
-- `config.h` - where I store my secret API key
-- `CMakeLists.txt` - build instructions
+I added **TONS of comments** so even I can understand everything later.
 
 ---
 
 <h1 align="center">Fully Commented main.cpp</h1>
 
-Here is the **complete code** with **a shitload of comments** so even a total beginner can understand every single line:
-
 ```cpp
-#include <iostream>              // For cout and cerr (printing to console)
-#include <curl/curl.h>           // Main library for making HTTP requests (POST to API)
-#include <nlohmann/json.hpp>     // Super cool library to work with JSON easily
-#include "config.h"              // My file where the API key is stored
-#include <fstream>               // For saving the MP3 file to disk
+#include <iostream>              // Allows us to print text to the console with std::cout and std::cerr
+#include <curl/curl.h>           // Library that lets us talk to websites (send HTTP requests)
+#include <nlohmann/json.hpp>     // Awesome library to easily create and read JSON data
+#include "config.h"              // My own file where I keep the secret API key
+#include <fstream>               // Needed to save the MP3 file to the hard drive
 
-using json = nlohmann::json;     // Shortcut so I don't have to write nlohmann::json every time
+using json = nlohmann::json;     // Short name so I don't have to type nlohmann::json every time
 
-// Callback function that curl calls every time it receives some data from the server
-// This is needed because the MP3 can be big and come in small chunks
-size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* output) { 
-    // NOLINT(readability-non-const-parameter)  // Just to shut up the linter
-    
-    // Calculate how many bytes we received this time
+// ===================================================================
+// CALLBACK FUNCTION
+// Curl calls this function every time it receives a piece of data from the server
+// ===================================================================
+size_t WriteCallback(
+    void* contents,           // Pointer to the chunk of data we just received (raw bytes)
+    size_t size,              // Size of each "item" in bytes (usually 1)
+    size_t nmemb,             // Number of items in this chunk
+    std::string* output)      // Pointer to our string where we want to store all received data
+{
+    // Calculate real size of this chunk in bytes
+    // Example: if size = 1 and nmemb = 1024 → totalSize = 1024 bytes
     size_t totalSize = size * nmemb;
-    
-    // Add these bytes to our string buffer
+
+    // Add this chunk to the end of our string
+    // (char*)contents converts the void* pointer to something we can read as characters
     output->append((char*)contents, totalSize);
-    
-    // Tell curl we processed all the data
+
+    // We must return how many bytes we actually processed
+    // If we return less than totalSize, curl thinks something went wrong
     return totalSize;
 }
 
-int main() {
-    // The voice ID I want to use (you can change it to any other ElevenLabs voice)
-    std::string voiceId = "EXAVITQu4vr4xnSDxMaL"; 
+int main()
+{
+    // ====================== VARIABLES ======================
     
-    // Build the full URL for the Text-to-Speech endpoint
-    std::string url = "https://api.elevenlabs.io/v1/text-to-speech/" + voiceId;
+    std::string voiceId = "EXAVITQu4vr4xnSDxMaL";   
+    // This is the ID of the voice I want to use. 
+    // You can find other voice IDs on ElevenLabs website.
 
-    // Variables we will need
-    CURL* curl = nullptr;        // Pointer to the curl session
-    CURLcode res;                // Variable to store if the request was successful or not
-    std::string readBuffer;      // This string will hold the raw MP3 data we get back
+    std::string url = "https://api.elevenlabs.io/v1/text-to-speech/" + voiceId;  
+    // We build the full address where we send the request.
+    // Example: https://api.elevenlabs.io/v1/text-to-speech/EXAVITQu4vr4xnSDxMaL
 
-    // Initialize curl globally (must be done once)
-    curl_global_init(CURL_GLOBAL_DEFAULT);
+    CURL* curl = nullptr;        
+    // This is a pointer to the CURL session. 
+    // Think of it as "the connection" to the internet. 
+    // We set it to nullptr first because we haven't created it yet.
+
+    CURLcode res;                
+    // This variable will store the result of the request.
+    // CURLE_OK means everything went fine. Other values = error.
+
+    std::string readBuffer;      
+    // This string will collect all the data (MP3 bytes) that the server sends us.
+    // At the end it will contain the whole audio file.
+
+    // ====================== INITIALIZATION ======================
     
-    curl = curl_easy_init();     // Create a new curl session
+    curl_global_init(CURL_GLOBAL_DEFAULT);   
+    // We must call this once before using any curl functions.
+    // It prepares some global stuff inside the library.
 
-    // Check if curl started successfully
-    if (curl) {
+    curl = curl_easy_init();     
+    // Creates a new easy curl session. 
+    // Now "curl" pointer actually points to a working connection.
+
+    // Check if we successfully created the curl session
+    if (curl) 
+    {
+        // ====================== CREATE JSON PAYLOAD ======================
         
-        // Create the JSON payload that we send to the API
         json payload = {
-            {"text", "Hello! This is a test"},   // The text we want to speak
-            {"model_id", "eleven_multilingual_v2"},         // Which AI model to use (good for many languages)
-            {"voice_settings", {                            // Settings that control how the voice sounds
-                {"stability", 0.75},                        // How stable/emotional the voice is
-                {"similarity_boost", 0.75}                  // How much it tries to sound like the original voice
+            {"text", "Hello! This is a test"},     // The text we want the AI to say
+            {"model_id", "eleven_multilingual_v2"},           // Which AI model should speak (this one is good)
+            {"voice_settings", {                              // How the voice should sound
+                {"stability", 0.75},                          // 0.0 = very emotional, 1.0 = very stable/calm
+                {"similarity_boost", 0.75}                    // How close to the original voice it should be
             }}
         };
 
-        // Convert our JSON object into a normal string so curl can send it
-        std::string jsonStr = payload.dump();
+        std::string jsonStr = payload.dump();   
+        // .dump() turns our json object into a normal text string 
+        // so we can send it to the server.
 
-        // Prepare headers for the request
-        struct curl_slist* headers = NULL;
+        // ====================== HEADERS ======================
         
-        // Add our secret API key (comes from config.h)
-        headers = curl_slist_append(headers, ("xi-api-key: " + apiKey).c_str());
+        struct curl_slist* headers = NULL;   
+        // This is a linked list of HTTP headers. Starts empty.
+
+        headers = curl_slist_append(headers, ("xi-api-key: " + apiKey).c_str());  
+        // Adds our secret API key so ElevenLabs knows it's really us.
+
+        headers = curl_slist_append(headers, "Accept: application/json");        
+        headers = curl_slist_append(headers, "Content-Type: application/json");  
+        headers = curl_slist_append(headers, "accept: audio/mpeg");              
+        // These tell the server what format we are sending and what we want back.
+
+        // ====================== SET OPTIONS ======================
         
-        // Tell the server what we accept and what we are sending
-        headers = curl_slist_append(headers, "Accept: application/json");
-        headers = curl_slist_append(headers, "Content-Type: application/json");
-        headers = curl_slist_append(headers, "accept: audio/mpeg");   // We expect MP3 audio back
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());                    
+        // Tells curl where to send the request (the full web address).
 
-        // Now we set all options for this request
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());                    // Where to send the request
-        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);                 // Add all our headers
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);       // Use our callback to receive data
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);              // Put received data into readBuffer
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, jsonStr.c_str());         // Send the JSON as the body
-        curl_easy_setopt(curl, CURLOPT_POST, 1L);                            // This is a POST request
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);                 
+        // Gives curl all the headers we created above.
 
-        // Actually send the request to ElevenLabs
-        res = curl_easy_perform(curl);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);       
+        // Tells curl to call our WriteCallback function when data arrives.
 
-        // Check if something went wrong with the connection
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);              
+        // Tells the callback where to put the received data (our readBuffer string).
+
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, jsonStr.c_str());         
+        // The actual data (JSON) we are sending in the request body.
+
+        curl_easy_setopt(curl, CURLOPT_POST, 1L);                            
+        // Tells curl this is a POST request (not GET).
+
+        // ====================== SEND THE REQUEST ======================
+        
+        res = curl_easy_perform(curl);   
+        // This is the moment we actually send everything to ElevenLabs!
+
+        // ====================== CHECK RESULT ======================
+        
         if (res != CURLE_OK) {
+            // Something went wrong with the connection
             std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(res) << std::endl;
         } 
         else {
-            // Check if the server returned an error message (starts with {"detail": )
+            // We got a response. Now check if it's an error or real audio.
+            
             if (readBuffer.find("{\"detail\":") != std::string::npos) {
+                // If the response starts with {"detail": it means the API returned an error
                 std::cerr << "API Error: " << readBuffer << std::endl;
             } 
             else {
-                // Everything is good! Save the audio to a file
-                std::ofstream outFile("output.mp3", std::ios::binary);
+                // Success! The data in readBuffer is the MP3 file.
                 
+                std::ofstream outFile("output.mp3", std::ios::binary);  
+                // Open (or create) a file called output.mp3 in binary mode
+
                 if (outFile.is_open()) {
-                    outFile.write(readBuffer.c_str(), readBuffer.size());  // Write all bytes
-                    outFile.close();
+                    outFile.write(readBuffer.c_str(), readBuffer.size());  
+                    // Write all bytes from readBuffer into the file
+                    outFile.close();                                       
+                    // Close the file so everything is saved properly
+                    
                     std::cout << "Audio saved to output.mp3" << std::endl;
-                    std::cout << "Check the file in the same folder!" << std::endl;
+                    std::cout << "Go check the file in the folder!" << std::endl;
                 } 
                 else {
                     std::cerr << "Failed to open output file." << std::endl;
@@ -158,29 +178,28 @@ int main() {
         }
     }
 
-    // Clean up curl stuff
-    curl_global_cleanup();
-    
-    return 0;   // Program finished successfully
+    // ====================== CLEAN UP ======================
+    curl_global_cleanup();   // Free all global resources used by curl
+    // Note: we don't need to call curl_easy_cleanup(curl) here because 
+    // the program is ending anyway, but it's good practice in bigger projects.
+
+    return 0;   // Everything went well, program ends successfully
 }
 ```
 
 ---
 
-<h1 align="center">config.h</h1>
+<h1 align="center">Other files</h1>
 
+**config.h**
 ```cpp
 #pragma once
-
 #include <string>
 
-std::string apiKey = "sk_b4598f5c527049c701b56109bfbf7b3fccac899898e2cb01";  // ← Put your real key here
+std::string apiKey = "sk_b4598f5c527049c701b56109bfbf7b3fccac899898e2cb01";
 ```
 
----
-
-<h1 align="center">CMakeLists.txt (example)</h1>
-
+**CMakeLists.txt**
 ```cmake
 cmake_minimum_required(VERSION 3.20)
 project(ElevenLabs_First_MP3)
@@ -205,7 +224,6 @@ target_link_libraries(ElevenLabs_First_MP3 PRIVATE
 </p>
 
 <p align="center">
-  <b>Made by Denys </b><br>
-  My first real API project in C++ • Learning high-performance stuff
+  <b>Made with by Denys)</b><br>
+  My first API project • Learning C++ step by step
 </p>
-
