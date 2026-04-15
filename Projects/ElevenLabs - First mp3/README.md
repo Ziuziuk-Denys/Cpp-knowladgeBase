@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/welcome_banner.gif?raw=true" width="100%" alt="Welcome Banner" />
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/C++-ElevenLabs%20TTS-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
   <img src="https://img.shields.io/badge/Status-Working-success?style=for-the-badge" />
 </p>
