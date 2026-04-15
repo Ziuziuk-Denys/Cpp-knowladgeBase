@@ -179,3 +179,89 @@ C++ evaluates operators in a specific order - like math rules (multiplication be
 > When in doubt, just use parentheses `()` - they always override the default order and make your code easier to read anyway.
 
 ---
+```markdown
+---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
+</p>
+
+<h1 align="center">Loops</h1>
+
+Loops are super useful in C++ when you need to repeat the same code many times. Like printing numbers from 1 to 100 or going through all elements in a list. Without loops you'd have to copy-paste the same line a hundred times — no thanks!
+
+This is just a quick overview so I can remember the basics fast. All the full examples and extra stuff (like `range-based for` with vectors) are in the [Docs](https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Docs/) folder.
+
+---
+
+<h1 align="center">The Three Main Loops</h1>
+
+### 1. `for` loop
+The most common one. You set a starting point, a condition, and what happens after every step.
+
+```cpp
+for (int i = 0; i < 10; i++) {
+    std::cout << i << " ";
+}
+```
+
+- `int i = 0` → start
+- `i < 10` → keep going while this is true
+- `i++` → add 1 after every loop
+
+**Real use:** counting, going through arrays, repeating something exact number of times.
+
+### 2. `while` loop
+Runs as long as the condition is true. You control the counter yourself.
+
+```cpp
+int count = 0;
+while (count < 5) {
+    std::cout << "Hello!\n";
+    count++;
+}
+```
+
+Good when you don't know exactly how many times it will run (like waiting for user input).
+
+### 3. `do-while` loop
+Same as `while`, but it runs **at least once** even if the condition is false from the start.
+
+```cpp
+int num;
+do {
+    std::cout << "Enter a positive number: ";
+    std::cin >> num;
+} while (num <= 0);
+```
+
+---
+
+<h1 align="center">Quick Tips I Always Forget</h1>
+
+- Use `size_t` or `int` for loop counters (but `size_t` is safer with `.size()`).
+- Be careful with infinite loops! If the condition never becomes false, your program will freeze.
+- You can use `break;` to jump out of the loop early.
+- You can use `continue;` to skip the rest of the current loop and go to the next one.
+
+**Example with break and continue:**
+```cpp
+for (int i = 1; i <= 10; i++) {
+    if (i == 3) continue;      // skip 3
+    if (i == 7) break;         // stop at 7
+    std::cout << i << " ";
+}
+```
+
+> [!TIP]
+> Start with `for` loop when you know how many times you need to repeat something. It's the easiest to read.
+
+> [!WARNING]
+> Don't forget to change the variable inside `while` or `do-while`, or you'll get an infinite loop and your program will hang!
+
+For more examples (nested loops, looping through strings, vectors, etc.) just go check the **Docs/Loops** folder.
+
+---
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
+</p>
