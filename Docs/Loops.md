@@ -1,10 +1,10 @@
+<h1 align="center">Loops in C++</h1>
+
 <p align="center">
   <img src="https://img.shields.io/badge/C++-Loops-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
 </p>
 
 ---
-
-<h1 align="center">Loops in C++</h1>
 
 Yo guys! Loops are super cool. They let your code repeat the same thing many times without copying the same lines again and again. I use them all the time for audio stuff, lists, counting and games. Without loops programming would be boring as hell.
 
