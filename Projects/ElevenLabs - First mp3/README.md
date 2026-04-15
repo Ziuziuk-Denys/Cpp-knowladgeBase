@@ -224,6 +224,6 @@ target_link_libraries(ElevenLabs_First_MP3 PRIVATE
 </p>
 
 <p align="center">
-  <b>Made with by Denys)</b><br>
+  <b>Made by Denys)</b><br>
   My first API project • Learning C++ step by step
 </p>
