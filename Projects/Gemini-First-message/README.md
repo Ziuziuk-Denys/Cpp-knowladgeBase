@@ -123,7 +123,7 @@ int main() {
 #include <string>
 
 // Your Gemini API key (get it from Google AI Studio)
-std::string GEMINI_API = "AIzaSyBfsoeq2AxbwfONvBlVNCNB7C6FYPI_qqY";
+std::string GEMINI_API = "YOUR_API";
 ```
 
 **CMakeLists.txt**
