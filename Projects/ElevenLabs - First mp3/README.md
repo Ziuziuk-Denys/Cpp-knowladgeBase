@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Ziuziuk-Denys/Cpp-knowladgeBase/blob/main/Assets/welcome_banner.gif?raw=true" width="100%" alt="Welcome Banner" />
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWowbXg5Mml1d213eThhdmNpMTlzbmxzZ3k1ODd1aHNlNzdhYjh4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8nRxogx9tgvCzuSHLl/giphy.gif?raw=true" width="100%" alt="Idk" />
 </p>
 
 <p align="center">
