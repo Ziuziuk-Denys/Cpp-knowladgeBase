@@ -85,7 +85,7 @@ Jarvis_Final/
 
 ---
 
-<h1 align="center">CMakeLists.txt - Full Comments</h1>
+<h1 align="center">CMakeLists.txt</h1>
 
 This is the build configuration file. CMake reads it and knows how to compile the project, find libraries, and link everything together.
 
@@ -155,7 +155,7 @@ add_custom_command(TARGET Jarvis POST_BUILD
 
 ---
 
-<h1 align="center">Config.h - Full Comments</h1>
+<h1 align="center">Config.h</h1>
 
 This file stores all the API keys and voice settings. It's included wherever we need to talk to an external service.
 
@@ -198,7 +198,7 @@ const std::string ELEVEN_LABS_VOICE_ID = "EXAVITQu4vr4xnSDxMaL";
 
 ---
 
-<h1 align="center">main.cpp - Full Comments</h1>
+<h1 align="center">main.cpp</h1>
 
 This is the entry point of the whole program. It creates all the objects and runs an infinite loop - record, transcribe, ask AI, speak the answer, repeat forever until you close the console.
 
@@ -310,7 +310,7 @@ int main() {
 
 ---
 
-<h1 align="center">Recorder.h - Full Comments</h1>
+<h1 align="center">Recorder.h</h1>
 
 This file handles everything microphone-related. It uses the **miniaudio** library - a single-header audio library that works on Windows, Mac, and Linux - to capture raw audio from your mic and store it in the global `fullRecording` vector.
 
@@ -412,7 +412,7 @@ void startRecording() {
 
 ---
 
-<h1 align="center">Transcriber.h - Full Comments</h1>
+<h1 align="center">Transcriber.h</h1>
 
 This file takes the raw audio bytes stored in `fullRecording` and converts them into a plain text string using **Vosk** - an offline speech recognition library. The cool thing about Vosk is that it works completely without internet. All the AI model files are stored locally in the `model/` folder.
 
@@ -492,7 +492,7 @@ std::string convertAudioToText(std::vector<char> fullRecording) {
 
 ---
 
-<h1 align="center">Brain.h - Full Comments</h1>
+<h1 align="center">Brain.h</h1>
 
 This is the AI brain of the whole project. It takes the transcribed text, packages it into a JSON request, sends it to **Google's Gemini API** over HTTP using libcurl, parses the response, and stores the answer in `gemini_response` so `main.cpp` can grab it.
 
@@ -630,7 +630,7 @@ public:
 
 ---
 
-<h1 align="center">VoiceOutput.h - Full Comments</h1>
+<h1 align="center">VoiceOutput.h</h1>
 
 This is the final step in the pipeline. It takes Gemini's text answer, sends it to the **ElevenLabs Text-to-Speech API** to generate a realistic human-sounding voice, saves the resulting audio as `output.mp3`, and plays it on Windows using the built-in MCI (Media Control Interface).
 
