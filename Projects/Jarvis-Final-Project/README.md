@@ -159,9 +159,6 @@ add_custom_command(TARGET Jarvis POST_BUILD
 
 This file stores all the API keys and voice settings. It's included wherever we need to talk to an external service.
 
-> [!WARNING]
-> Never push this file to a public GitHub repo! Your keys will get stolen and you'll get billed. Add `Config.h` to your `.gitignore` right away.
-
 ```cpp
 // Header guard - makes sure this file is only included once
 // even if multiple files try to #include it at the same time
