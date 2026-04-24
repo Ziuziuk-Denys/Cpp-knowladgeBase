@@ -67,13 +67,13 @@ Jarvis_Final
 #include <string>         // We need the string type to store our API keys
 
 // These are constant strings that never change while the program runs
-const std::string GEMINI_API_KEY = "AIzaSyBbRSmKqN-JznYD8TWUMomevB7OE31AQFY";
+const std::string GEMINI_API_KEY = "YOUR_API";
 // This is my secret key from Google so Jarvis can talk to Gemini AI
 
-const std::string ELEVEN_LABS_API_KEY = "sk_b4598f5c527049c701b56109bfbf7b3fccac899898e2cb01";
+const std::string ELEVEN_LABS_API_KEY = "YOUR_API";
 // This is my secret key from ElevenLabs so we can generate real human-like voice
 
-const std::string ELEVEN_LABS_VOICE_ID = "EXAVITQu4vr4xnSDxMaL";
+const std::string ELEVEN_LABS_VOICE_ID = "YOUR_API";
 // This is the ID of the voice I like the most (calm male voice)
 
 #endif // CONFIG_H        // End of the "include guard" so the file doesn't get duplicated
